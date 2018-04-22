@@ -9,6 +9,7 @@ This game won't never make it into a commercial status!
 
 ## current status
 still work in progress and I ain't gonna rush!
-Currently parallax scrolling works. You can move the camera up and down using UP/DOWN keyboard.
+1. Currently parallax scrolling works.
+2. You can move the camera up and down using UP/DOWN keyboard.
 
 ![Capture1](doc/images/capture1.png)
