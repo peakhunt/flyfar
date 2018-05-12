@@ -8,6 +8,12 @@ I just downloaded them from the internet and used them for my experimental game.
 This game won't never make it into a commercial status!
 
 ## current status
+
+# May,12, 2018
+Found some chopper sprites and finally it looks like flying.
+![heli flying](doc/images/capture2.png "heli flying")
+
+# previously when I just got started
 still work in progress and I ain't gonna rush! Game programming is always a good hobby!
 1. Currently parallax scrolling works.
 2. You can move the camera up and down using UP/DOWN keyboard.
