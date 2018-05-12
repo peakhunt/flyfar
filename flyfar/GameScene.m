@@ -18,11 +18,15 @@
   double          _vertical_speed;
   
   ParallaxBackground  *_parallax_back;
+  
+  SKSpriteNode*   _heliNode;
+  NSArray *_heliTextures;
 }
 
 - (void)didMoveToView:(SKView *)view {
   [self setupBackground];
-
+  [self setupHeli];
+  
   // Get label node from scene and store it for use later
   _label = (SKLabelNode *)[self childNodeWithName:@"//helloLabel"];
   
@@ -84,6 +88,30 @@
                                                         files:back_files
                                                        hspeed:back_speeds
                                                       vfactor:back_vfactors];
+}
+
+- (void)setupHeli {
+  SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"heli"];
+  
+  SKTexture *h1 = [atlas textureNamed:@"heli-1.png"];
+  SKTexture *h2 = [atlas textureNamed:@"heli-2.png"];
+  SKTexture *h3 = [atlas textureNamed:@"heli-3.png"];
+  SKTexture *h4 = [atlas textureNamed:@"heli-4.png"];
+
+  _heliTextures = @[h1,h2,h3,h4];
+  
+  _heliNode = [SKSpriteNode spriteNodeWithTexture:h1];
+  
+  [_heliNode setScale:0.5];
+  [_heliNode setPosition:CGPointMake(-self.size.width / 4, 0)];
+  [_heliNode setZPosition:-0.5];
+
+  [self addChild:_heliNode];
+  
+  [_heliNode runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:_heliTextures
+                                                                      timePerFrame:0.1]
+                        ]
+   ];
 }
 
 - (void)touchDownAtPoint:(CGPoint)pos {
@@ -178,15 +206,20 @@
 
 -(void)update:(CFTimeInterval)currentTime {
   double delta = 0;
+  double heliDecline;
   
   delta = [self updateDelta:currentTime];
+  
+  heliDecline = M_PI * (_vertical_speed * 30)/180;
   
   _background_vert_pos = _background_vert_pos - _vertical_speed * 200 * delta;
   if(_background_vert_pos > 0)
   {
     _background_vert_pos = 0;
+    heliDecline = 0;
   }
   
+  [_heliNode setZRotation:heliDecline];
   [_parallax_back setVert_pos:_background_vert_pos];
   [_parallax_back scrollBackground:delta];
 }

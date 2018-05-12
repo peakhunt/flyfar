@@ -24,6 +24,7 @@
 		5A335CEE208C4B7F0072360E /* layer_08_1920x1080.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A335CE6208C4B7F0072360E /* layer_08_1920x1080.png */; };
 		5A335CEF208C4B7F0072360E /* layer_02_1920x1080.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A335CE7208C4B7F0072360E /* layer_02_1920x1080.png */; };
 		5A5A6D68208C9C0C001B45D1 /* ParallaxBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A6D67208C9C0C001B45D1 /* ParallaxBackground.m */; };
+		5AC0107620A71CB500CD8010 /* heli.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5AC0107520A71CB500CD8010 /* heli.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		5A335CE7208C4B7F0072360E /* layer_02_1920x1080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layer_02_1920x1080.png; sourceTree = "<group>"; };
 		5A5A6D66208C9C0C001B45D1 /* ParallaxBackground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParallaxBackground.h; sourceTree = "<group>"; };
 		5A5A6D67208C9C0C001B45D1 /* ParallaxBackground.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxBackground.m; sourceTree = "<group>"; };
+		5AC0107520A71CB500CD8010 /* heli.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = heli.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		5A335CDF208C4B4A0072360E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5AC0107520A71CB500CD8010 /* heli.atlas */,
 				5A5A6D69208CA699001B45D1 /* background */,
 			);
 			path = images;
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A335CC7208C4B1F0072360E /* GameScene.sks in Resources */,
+				5AC0107620A71CB500CD8010 /* heli.atlas in Resources */,
 				5A335CEE208C4B7F0072360E /* layer_08_1920x1080.png in Resources */,
 				5A335CD1208C4B220072360E /* Assets.xcassets in Resources */,
 				5A335CEC208C4B7F0072360E /* layer_04_1920x1080.png in Resources */,
